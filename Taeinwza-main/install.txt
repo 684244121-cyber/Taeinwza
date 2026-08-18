@@ -1,0 +1,34 @@
+1. npm install -D prisma
+
+2. npm install @prisma/client @prisma/adapter-pg pg dotenv
+
+3. npx prisma init
+
+4. create .env
+
+5. copy Configure ORM and change password
+and edit prisma.config.ts 
+url: process.env["DIRECT_URL"] ?? process.env["DATABASE_URL"],
+
+
+
+6. create folder lib and create file prisma.ts
+
+7. add 
+model Book {
+  id        Int      @id @default(autoincrement())
+  title     String
+  price     Int
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+} 
+in prisma/schema.prisma
+
+8. edit lib/prisma.ts
+
+
+9. npx create-db
+
+10. npx prisma migrate dev --name init
+
+11. npx prisma generate
