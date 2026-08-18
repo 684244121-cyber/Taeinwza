@@ -1,149 +1,218 @@
 import Counter from "@/components/Counter";
 import Image from "next/image";
 
-// ข้อมูลอนิเมะจริง 5 หัวข้อ เปลี่ยนจากคำอ่านภาษาละตินเดิม
+// ข้อมูล Ben 10
 const animeList = [
   {
     id: 1,
-    title: "Demon Slayer: Kimetsu no Yaiba",
-    thaiTitle: "ดาบพิฆาตอสูร",
-    genre: "Action / Fantasy",
+    title: "Ben 10",
+    thaiTitle: "เบ็นเท็น",
+    genre: "Action / Sci-Fi",
     rating: "9.8",
   },
   {
     id: 2,
-    title: "Detective Conan",
-    thaiTitle: "ยอดนักสืบจิ๋วโคนัน",
-    genre: "Mystery / Investigation",
-    rating: "9.5",
+    title: "Ben 10: Alien Force",
+    thaiTitle: "เบ็นเท็น: พลังเอเลี่ยน",
+    genre: "Action / Adventure",
+    rating: "9.7",
   },
   {
     id: 3,
-    title: "Attack on Titan (Shingeki no Kyojin)",
-    thaiTitle: "ผ่าพิภพไททัน",
-    genre: "Dark Fantasy / Action",
+    title: "Ben 10: Ultimate Alien",
+    thaiTitle: "เบ็นเท็น: อัลติเมทเอเลี่ยน",
+    genre: "Action / Sci-Fi",
     rating: "9.9",
   },
   {
     id: 4,
-    title: "Jujutsu Kaisen",
-    thaiTitle: "มหาเวทย์ผนึกมาร",
-    genre: "Action / Supernatural",
+    title: "Ben 10: Omniverse",
+    thaiTitle: "เบ็นเท็น: ออมนิเวิร์ส",
+    genre: "Action / Comedy",
     rating: "9.6",
   },
   {
     id: 5,
-    title: "Sgt. Frog (Keroro Gunsou)",
-    thaiTitle: "เคโรโระ ขบวนการอ๊บอ๊บ",
-    genre: "Comedy / Sci-Fi",
-    rating: "9.7",
+    title: "Ben 10: Reboot",
+    thaiTitle: "เบ็นเท็น ฉบับรีบูต",
+    genre: "Action / Comedy",
+    rating: "9.5",
   },
 ];
 
 const AboutPage = () => {
   return (
-    <div className="min-h-screen bg-[#fafafa] py-12 px-6">
+    <div className="min-h-screen bg-[#050505] py-12 px-6 text-white">
       <div className="max-w-2xl mx-auto space-y-8">
-        
+
         {/* Header Section */}
-        <div className="bg-white border border-slate-100 rounded-3xl p-8 shadow-sm space-y-3">
-          <span className="text-[11px] font-semibold uppercase tracking-wider text-emerald-600 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-100">
-            Welcome Readers
+        <div className="bg-[#101010] border border-lime-400/20 rounded-3xl p-8 shadow-[0_0_25px_rgba(163,230,53,0.08)] space-y-3">
+
+          <span className="text-[11px] font-bold uppercase tracking-wider text-lime-400 bg-lime-400/10 px-3 py-1 rounded-full border border-lime-400/30">
+            Welcome to Omnitrix Library
           </span>
-          <h1 className="text-2xl font-extrabold text-slate-900 tracking-tight pt-1">
-            ยินดีต้อนรับสู่พื้นที่อ่านหนังสือของเรา
+
+          <h1 className="text-2xl font-black text-white tracking-tight pt-1">
+            ยินดีต้อนรับสู่จักรวาลของ{" "}
+            <span className="text-lime-400">BEN 10</span>
           </h1>
-          <p className="text-slate-500 text-xs sm:text-sm leading-relaxed">
-            สวัสดีผู้อ่านทุกท่าน! พื้นที่ตรงนี้ถูกสร้างขึ้นมาเพื่อให้ทุกคนได้เข้ามาสำรวจ แลกเปลี่ยนความคิด และเพลิดเพลินไปกับคลังหนังสือและมินิฟีเจอร์ที่เราตั้งใจพัฒนาขึ้นมาครับ
+
+          <p className="text-gray-500 text-xs sm:text-sm leading-relaxed">
+            พื้นที่สำหรับแฟน ๆ ของ Ben 10
+            ที่ต้องการสำรวจเรื่องราวของเบ็น เทนนีสัน
+            Omnitrix และเหล่าเอเลี่ยนจากทั่วจักรวาล
           </p>
+
         </div>
 
         {/* Counter Section */}
-        <div className="bg-white border border-slate-100 rounded-3xl p-8 shadow-sm space-y-4">
+        <div className="bg-[#101010] border border-lime-400/20 rounded-3xl p-8 shadow-[0_0_25px_rgba(163,230,53,0.06)] space-y-4">
+
           <div className="space-y-1">
-            <h2 className="text-sm font-bold text-slate-900">ลองมีปฏิสัมพันธ์กับเว็บ</h2>
-            <p className="text-xs text-slate-400">
-              ทดลองกดปุ่มด้านล่างเพื่อปรับเปลี่ยนตัวเลขจำนวนเล่มหนังสือที่คุณสนใจ
+
+            <h2 className="text-sm font-bold text-white">
+              OMNITRIX COUNTER
+            </h2>
+
+            <p className="text-xs text-gray-500">
+              ทดลองกดปุ่มเพื่อเพิ่มจำนวนเอเลี่ยนที่คุณสนใจ
             </p>
+
           </div>
-          <div className="p-4 bg-slate-50 border border-slate-100 rounded-2xl flex justify-center">
+
+          <div className="p-4 bg-black border border-gray-800 rounded-2xl flex justify-center">
             <Counter />
           </div>
+
         </div>
 
-        {/* Public Image Section */}
-        <div className="bg-white border border-slate-100 rounded-3xl p-8 shadow-sm space-y-4">
+        {/* Ben 10 Mascot Section */}
+        <div className="bg-[#101010] border border-lime-400/20 rounded-3xl p-8 shadow-[0_0_25px_rgba(163,230,53,0.06)] space-y-4">
+
           <div className="space-y-1">
-            <h2 className="text-sm font-bold text-slate-900">มาสคอตประจำเว็บไซต์</h2>
-            <p className="text-xs text-slate-400">
-              พบน้อง Keroro ตัวแทนความสนุกที่จะอยู่เป็นเพื่อนคุณในทุกหน้าอ่านหนังสือ
+
+            <h2 className="text-sm font-bold text-white">
+              OMNITRIX
+            </h2>
+
+            <p className="text-xs text-gray-500">
+              อุปกรณ์สุดล้ำที่ทำให้ Ben สามารถแปลงร่างเป็นเอเลี่ยนหลากหลายชนิด
             </p>
+
           </div>
-          <div className="w-28 h-28 mx-auto overflow-hidden rounded-2xl bg-slate-50 p-3 border border-slate-100 flex items-center justify-center">
+
+          <div className="w-32 h-32 mx-auto overflow-hidden rounded-full bg-black p-3 border-2 border-lime-400 flex items-center justify-center shadow-[0_0_25px_rgba(163,230,53,0.35)]">
+
             <img
-              src="/image/keroro.png"
-              alt="Keroro Mascot"
+              src="/image/ben10.jpg"
+              alt="Ben 10"
               className="w-full h-full object-contain hover:scale-110 transition-transform duration-300"
             />
+
           </div>
+
         </div>
 
-        {/* รายการน่าอ่านประจำวัน (แปลงเป็นชื่ออนิเมะจริง 5 หัวข้อ) */}
-        <div className="bg-white border border-slate-100 rounded-3xl p-8 shadow-sm space-y-4">
-          <div className="flex items-center justify-between border-b border-slate-100 pb-3">
+        {/* Ben 10 Collection */}
+        <div className="bg-[#101010] border border-lime-400/20 rounded-3xl p-8 shadow-[0_0_25px_rgba(163,230,53,0.06)] space-y-4">
+
+          <div className="flex items-center justify-between border-b border-gray-800 pb-3">
+
             <div>
-              <h2 className="text-sm font-bold text-slate-900">รายการน่าอ่านประจำวัน</h2>
-              <p className="text-xs text-slate-400">หัวข้อแนะนำที่เราดึงมาจากระบบสำหรับผู้อ่านทุกท่าน</p>
+
+              <h2 className="text-sm font-bold text-white">
+                BEN 10 COLLECTION
+              </h2>
+
+              <p className="text-xs text-gray-500">
+                ซีรีส์ Ben 10 ที่แฟน ๆ ชื่นชอบ
+              </p>
+
             </div>
-            <span className="text-[10px] font-semibold px-2.5 py-0.5 bg-emerald-50 text-emerald-600 rounded-full border border-emerald-100">
-              {animeList.length} หัวข้อ
+
+            <span className="text-[10px] font-bold px-2.5 py-0.5 bg-lime-400/10 text-lime-400 rounded-full border border-lime-400/30">
+              {animeList.length} เรื่อง
             </span>
+
           </div>
 
           <div className="space-y-3">
+
             {animeList.map((anime) => (
+
               <div
                 key={anime.id}
-                className="group flex items-center justify-between p-4 bg-slate-50/80 hover:bg-white border border-slate-100 hover:border-emerald-200 rounded-2xl transition-all duration-200 shadow-xs hover:shadow-md"
+                className="group flex items-center justify-between p-4 bg-black hover:bg-[#151515] border border-gray-800 hover:border-lime-400/40 rounded-2xl transition-all duration-200 shadow-sm"
               >
+
                 <div className="flex items-center gap-3.5">
-                  <span className="w-8 h-8 shrink-0 bg-white group-hover:bg-emerald-500 group-hover:text-white text-slate-600 font-extrabold text-xs rounded-xl flex items-center justify-center border border-slate-200 group-hover:border-emerald-500 transition-all duration-200">
+
+                  <span className="w-8 h-8 shrink-0 bg-[#101010] group-hover:bg-lime-400 group-hover:text-black text-gray-400 font-black text-xs rounded-xl flex items-center justify-center border border-gray-700 group-hover:border-lime-400 transition-all duration-200">
                     {anime.id}
                   </span>
+
                   <div>
-                    <p className="text-xs sm:text-sm text-slate-900 font-bold group-hover:text-emerald-600 transition-colors">
+
+                    <p className="text-xs sm:text-sm text-white font-bold group-hover:text-lime-400 transition-colors">
                       {anime.thaiTitle}
                     </p>
-                    <p className="text-[11px] text-slate-400 mt-0.5 font-medium">
-                      {anime.title} • <span className="text-slate-400">{anime.genre}</span>
+
+                    <p className="text-[11px] text-gray-500 mt-0.5 font-medium">
+                      {anime.title} •{" "}
+                      <span className="text-gray-600">
+                        {anime.genre}
+                      </span>
                     </p>
+
                   </div>
+
                 </div>
 
-                <div className="flex items-center gap-1 bg-amber-50 border border-amber-100 px-2.5 py-1 rounded-xl shrink-0">
-                  <span className="text-xs">⭐</span>
-                  <span className="text-[11px] font-bold text-amber-700">{anime.rating}</span>
+                <div className="flex items-center gap-1 bg-lime-400/10 border border-lime-400/20 px-2.5 py-1 rounded-xl shrink-0">
+
+                  <span className="text-xs">★</span>
+
+                  <span className="text-[11px] font-bold text-lime-400">
+                    {anime.rating}
+                  </span>
+
                 </div>
+
               </div>
+
             ))}
+
           </div>
+
         </div>
 
-        {/* External Image Section */}
-        <div className="bg-white border border-slate-100 rounded-3xl p-8 shadow-sm space-y-4 text-center">
+        {/* Alien Section */}
+        <div className="bg-[#101010] border border-lime-400/20 rounded-3xl p-8 shadow-[0_0_25px_rgba(163,230,53,0.06)] space-y-4 text-center">
+
           <div className="space-y-1 text-left">
-            <h2 className="text-sm font-bold text-slate-900">มุมพักสายตา</h2>
-            <p className="text-xs text-slate-400">ภาพบรรยากาศธรรมชาติสำหรับผ่อนคลายระหว่างการอ่าน</p>
+
+            <h2 className="text-sm font-bold text-white">
+              ALIEN DATABASE
+            </h2>
+
+            <p className="text-xs text-gray-500">
+              ฐานข้อมูลเอเลี่ยนจาก Omnitrix
+            </p>
+
           </div>
+
           <div className="flex justify-center overflow-hidden rounded-2xl pt-2">
+
             <Image
-              src="https://fastly.picsum.photos/id/791/200/300.jpg?grayscale&hmac=BeWMtmO0FemRpbDovWA5h-t58FbjhFvJjotU2VC9Bl0"
-              alt="ภูเขา"
+              src="/image/alienforce.jfif"
+              alt="Ben 10 Alien"
               width={300}
               height={300}
-              className="rounded-2xl object-cover hover:scale-105 transition-transform duration-300"
+              className="rounded-2xl object-contain hover:scale-105 transition-transform duration-300"
             />
+
           </div>
+
         </div>
 
       </div>

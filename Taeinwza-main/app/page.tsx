@@ -4,160 +4,240 @@ export default function Home() {
   const featuredBooks = [
     {
       id: "1",
-      title: "เคโรโระ ขบวนการอ๊บอ๊บป่วนโลก",
-      category: "Sci-Fi / Comedy",
+      title: "Ben 10: Classic Series",
+      category: "Action / Sci-Fi",
       rating: "4.9",
-      img: "/image/keroro.png",
+      img: "/image/ben10.jpg",
       tag: "ยอดนิยม",
-      color: "bg-emerald-50 text-emerald-600 border-emerald-100",
+      color: "bg-lime-400/10 text-lime-400 border-lime-400/30",
     },
     {
       id: "2",
-      title: "ทามามะ ทมิฬสะท้านภพ",
-      category: "Action / Cute",
+      title: "Alien Force",
+      category: "Action / Adventure",
       rating: "4.8",
-      img: "/image/tamama.png",
+      img: "/image/alienforce.jfif",
       tag: "มาใหม่",
-      color: "bg-amber-50 text-amber-600 border-amber-100",
+      color: "bg-green-400/10 text-green-400 border-green-400/30",
     },
     {
       id: "3",
-      title: "กีโรโระ ยอดนักสู้สมรภูมิรัก",
-      category: "Military / Romance",
-      rating: "4.7",
-      img: "/image/giroro.png",
+      title: "Ultimate Alien",
+      category: "Sci-Fi / Action",
+      rating: "4.9",
+      img: "/image/ultimatealien.jpg",
       tag: "แนะนำ",
-      color: "bg-rose-50 text-rose-600 border-rose-100",
+      color: "bg-emerald-400/10 text-emerald-400 border-emerald-400/30",
     },
     {
       id: "4",
-      title: "คุรุรุ สิ่งประดิษฐ์เขย่าขวัญ",
-      category: "Tech / Cyber",
-      rating: "4.9",
-      img: "/image/kururu.png",
+      title: "Omniverse",
+      category: "Adventure / Comedy",
+      rating: "4.7",
+      img: "/image/omniverse.jfif",
       tag: "ฮิตฮอต",
-      color: "bg-yellow-50 text-yellow-600 border-yellow-100",
+      color: "bg-lime-300/10 text-lime-300 border-lime-300/30",
     },
   ];
 
   return (
-    <div className="min-h-screen bg-[#fafafa] py-12 px-6 antialiased">
+    <div className="min-h-screen bg-[#050505] py-12 px-6 antialiased text-white">
+
       <div className="max-w-4xl mx-auto space-y-10">
-        
-        {/* Top Bar / Navigation Navigation */}
-        <div className="flex items-center justify-between bg-white border border-slate-100 rounded-2xl px-6 py-4 shadow-xs">
+
+        {/* TOP BAR */}
+        <div className="flex items-center justify-between bg-[#101010] border border-lime-400/20 rounded-2xl px-6 py-4 shadow-[0_0_25px_rgba(132,204,22,0.08)]">
+
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-emerald-50 border border-emerald-100 p-1.5 flex items-center justify-center">
-              <img src="/image/keroro.png" alt="Logo" className="w-full h-full object-contain" />
+
+            {/* OMNITRIX LOGO */}
+            <div className="w-11 h-11 rounded-full bg-black border-2 border-lime-400 flex items-center justify-center shadow-[0_0_15px_rgba(163,230,53,0.5)]">
+
+              <div className="w-7 h-7 rounded-full bg-lime-400 border-4 border-gray-900 flex items-center justify-center">
+                <div className="w-3.5 h-3.5 rounded-full bg-black flex items-center justify-center">
+                  <span className="text-[7px] font-black text-lime-400">
+                    10
+                  </span>
+                </div>
+              </div>
+
             </div>
+
             <div>
-              <h1 className="text-sm font-extrabold text-slate-900 tracking-tight">keroruayBook</h1>
-              <p className="text-[11px] text-slate-400">คลังข้อมูลมังงะและอนิเมะ</p>
+              <h1 className="text-sm font-black text-white tracking-tight">
+                BEN <span className="text-lime-400">10</span>
+              </h1>
+
+              <p className="text-[11px] text-gray-500">
+                Omnitrix Library
+              </p>
             </div>
+
           </div>
 
           <div className="flex items-center gap-2">
+
             <Link
               href="/info"
-              className="px-3.5 py-2 text-xs font-semibold text-slate-600 hover:text-slate-900 transition-colors"
+              className="px-3.5 py-2 text-xs font-semibold text-gray-400 hover:text-lime-400 transition-colors"
             >
               Info
             </Link>
+
             <Link
               href="/login"
-              className="px-4 py-2 text-xs font-semibold bg-slate-900 hover:bg-emerald-600 text-white rounded-xl transition-all shadow-xs cursor-pointer"
+              className="px-4 py-2 text-xs font-bold bg-lime-400 hover:bg-lime-300 text-black rounded-xl transition-all shadow-[0_0_12px_rgba(163,230,53,0.25)]"
             >
               เข้าสู่ระบบ
             </Link>
+
           </div>
+
         </div>
 
-        {/* Hero Section */}
-        <div className="bg-white border border-slate-100 rounded-3xl p-8 sm:p-10 shadow-sm space-y-6 text-center">
+        {/* HERO SECTION */}
+        <div className="bg-[#101010] border border-lime-400/20 rounded-3xl p-8 sm:p-10 shadow-[0_0_30px_rgba(132,204,22,0.06)] space-y-6 text-center">
+
           <div className="inline-block">
-            <span className="text-[11px] font-semibold uppercase tracking-wider text-emerald-600 bg-emerald-50 px-3 py-1 rounded-full border border-emerald-100">
-              Welcome to Pekopon Library
+
+            <span className="text-[11px] font-bold uppercase tracking-wider text-lime-400 bg-lime-400/10 px-3 py-1 rounded-full border border-lime-400/30">
+              Welcome to Omnitrix Library
             </span>
+
           </div>
 
           <div className="space-y-3 max-w-lg mx-auto">
-            <h2 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight leading-tight">
-              ค้นพบการ์ตูนและอนิเมะ <br />
-              <span className="text-emerald-600">ที่คุณชื่นชอบได้ง่ายๆ ที่นี่</span>
+
+            <h2 className="text-2xl sm:text-3xl font-black text-white tracking-tight leading-tight">
+
+              ค้นพบจักรวาลของ{" "}
+              <span className="text-lime-400">
+                BEN 10
+              </span>
+
+              <br />
+
+              <span className="text-lime-400">
+                และเหล่าเอเลี่ยนสุดเท่
+              </span>
+
             </h2>
-            <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
-              รวมคลังหนังสืออ่านสนุก ดีไซน์มินิมอลสบายตา โหลดรวดเร็วทันใจ พร้อมเสิร์ฟความบันเทิงตลอด 24 ชั่วโมง
+
+            <p className="text-xs sm:text-sm text-gray-500 leading-relaxed">
+              รวมเรื่องราวของ Ben Tennyson, Omnitrix และเหล่าเอเลี่ยนจากทั่วจักรวาล
+              พร้อมให้คุณสำรวจได้ตลอด 24 ชั่วโมง
             </p>
+
           </div>
 
-          {/* Search Bar */}
+          {/* SEARCH */}
           <div className="max-w-md mx-auto pt-2">
+
             <div className="relative flex items-center">
+
               <input
                 type="text"
-                placeholder="ค้นหาชื่อหนังสือ, นักเขียน, หมวดหมู่..."
-                className="w-full pl-4 pr-24 py-3 text-xs bg-slate-50/80 border border-slate-200/80 rounded-2xl focus:outline-hidden focus:border-emerald-500 focus:bg-white transition-all text-slate-800"
+                placeholder="ค้นหา Ben 10, Alien, Omnitrix..."
+                className="w-full pl-4 pr-24 py-3 text-xs bg-black border border-gray-800 rounded-2xl focus:outline-none focus:border-lime-400 focus:bg-[#080808] transition-all text-white placeholder:text-gray-600"
               />
+
               <button
                 type="button"
-                className="absolute right-1.5 px-4 py-2 bg-slate-900 hover:bg-emerald-600 text-white text-xs font-semibold rounded-xl transition-colors cursor-pointer"
+                className="absolute right-1.5 px-4 py-2 bg-lime-400 hover:bg-lime-300 text-black text-xs font-black rounded-xl transition-colors cursor-pointer"
               >
                 ค้นหา
               </button>
+
             </div>
+
           </div>
+
         </div>
 
-        {/* Featured Content Grid */}
+        {/* FEATURED */}
         <div className="space-y-4">
+
           <div className="flex items-center justify-between px-2">
+
             <div>
-              <h3 className="text-base font-extrabold text-slate-900">หนังสือแนะนำประจำสัปดาห์</h3>
-              <p className="text-xs text-slate-400">คัดสรรโดยทีมงานสิบโท Keroro</p>
+
+              <h3 className="text-base font-black text-white">
+                BEN 10 COLLECTION
+              </h3>
+
+              <p className="text-xs text-gray-500">
+                รวมเรื่องราวและเหล่าเอเลี่ยนยอดนิยม
+              </p>
+
             </div>
-            <Link href="/info" className="text-xs font-bold text-emerald-600 hover:underline">
+
+            <Link
+              href="/info"
+              className="text-xs font-bold text-lime-400 hover:text-lime-300 hover:underline"
+            >
               ดูทั้งหมด →
             </Link>
+
           </div>
 
+          {/* BOOK GRID */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+
             {featuredBooks.map((book) => (
+
               <div
                 key={book.id}
-                className="group bg-white border border-slate-100 rounded-3xl p-5 shadow-xs hover:shadow-md hover:border-emerald-200 transition-all duration-300 flex items-center gap-4"
+                className="group bg-[#101010] border border-gray-800 rounded-3xl p-5 shadow-sm hover:shadow-[0_0_25px_rgba(163,230,53,0.12)] hover:border-lime-400/40 transition-all duration-300 flex items-center gap-4"
               >
-                <div className={`w-20 h-20 shrink-0 rounded-2xl p-2 border flex items-center justify-center ${book.color}`}>
+
+                <div
+                  className={`w-20 h-20 shrink-0 rounded-2xl p-2 border flex items-center justify-center ${book.color}`}
+                >
+
                   <img
                     src={book.img}
                     alt={book.title}
                     className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300"
                   />
+
                 </div>
 
                 <div className="space-y-1.5 flex-1 min-w-0">
+
                   <div className="flex items-center justify-between gap-2">
-                    <span className={`text-[10px] font-bold px-2 py-0.5 rounded-md border ${book.color}`}>
+
+                    <span
+                      className={`text-[10px] font-bold px-2 py-0.5 rounded-md border ${book.color}`}
+                    >
                       {book.tag}
                     </span>
-                    <span className="text-[11px] font-bold text-amber-500 flex items-center gap-1">
+
+                    <span className="text-[11px] font-bold text-lime-400 flex items-center gap-1">
                       ★ {book.rating}
                     </span>
+
                   </div>
 
-                  <h4 className="text-xs font-bold text-slate-900 truncate group-hover:text-emerald-600 transition-colors">
+                  <h4 className="text-xs font-bold text-white truncate group-hover:text-lime-400 transition-colors">
                     {book.title}
                   </h4>
 
-                  <p className="text-[11px] text-slate-400">
+                  <p className="text-[11px] text-gray-500">
                     {book.category}
                   </p>
+
                 </div>
+
               </div>
+
             ))}
+
           </div>
+
         </div>
 
       </div>
+
     </div>
   );
 }
